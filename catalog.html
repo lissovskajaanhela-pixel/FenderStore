@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header__container">
+
+    <img src="Fenderlogo.png" class="header__logo-image">
+
+    <nav class="header__nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="cart.html">Корзина (<span class="cart-count">0</span>)</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<div class="catalog__list">
+
+  <div class="product-card" data-name="Vintera® III Mid '60s Stratocaster®" data-image="60s-Stratocaster.jpg">
+    <img src="60s-Stratocaster.jpg" class="product-card__image">
+    <h3>Vintera® III Mid '60s Stratocaster®</h3>
+    <p>120 000 ₽</p>
+    <button onclick="addToCart(this)">В корзину</button>
+  </div>
+
+  <div class="product-card" data-name="Vintera® III Mid '60s Telecaster®" data-image="60s-Telecaster.jpg">
+    <img src="60s-Telecaster.jpg" class="product-card__image">
+    <h3>Vintera® III Mid '60s Telecaster®</h3>
+    <p>110 000 ₽</p>
+    <button onclick="addToCart(this)">В корзину</button>
+  </div>
+
+  <div class="product-card" data-name="Vintera® III Mid '60s Jazzmaster®" data-image="60s-Jazzmaster.jpg">
+    <img src="60s-Jazzmaster.jpg" class="product-card__image">
+    <h3>Vintera® III Mid '60s Jazzmaster®</h3>
+    <p>130 000 ₽</p>
+    <button onclick="addToCart(this)">В корзину</button>
+  </div>
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

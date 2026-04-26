@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Корзина</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header__container">
+
+    <img src="Fenderlogo.png" class="header__logo-image">
+
+    <nav class="header__nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="cart.html">Корзина (<span class="cart-count">0</span>)</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<h2 class="title">Корзина</h2>
+
+<div id="cart-items"></div>
+
+<button class="cart__clear" onclick="clearCart()">Очистить корзину</button>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
