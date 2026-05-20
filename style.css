@@ -12,6 +12,10 @@ body {
     color: #fff;
 }
 
+.header {
+    border-bottom: 1px solid #333;
+}
+
 .header__container {
     display: flex;
     justify-content: space-between;
@@ -76,6 +80,7 @@ body {
     text-align: center;
     font-size: 28px;
     font-weight: 600;
+    margin-top: 20px;
 }
 
 .section-title {
