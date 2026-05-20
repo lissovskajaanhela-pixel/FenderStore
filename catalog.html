@@ -26,34 +26,72 @@
 
 <main>
 
-<div class="catalog__list">
+<h2 class="title">Категории</h2>
 
-  <div class="product-card" data-name="Vintera® III Mid '60s Stratocaster®" data-image="60s-Stratocaster.jpg">
-    <img src="60s-Stratocaster.jpg" class="product-card__image">
-    <h3>Vintera® III Mid '60s Stratocaster®</h3>
-    <p>120 000 ₽</p>
-    <button onclick="addToCart(this)">В корзину</button>
-  </div>
+<div class="catalog-menu">
 
-  <div class="product-card" data-name="Vintera® III Mid '60s Telecaster®" data-image="60s-Telecaster.jpg">
-    <img src="60s-Telecaster.jpg" class="product-card__image">
-    <h3>Vintera® III Mid '60s Telecaster®</h3>
-    <p>110 000 ₽</p>
-    <button onclick="addToCart(this)">В корзину</button>
-  </div>
+    <button
+        onmouseenter="renderCategories('models')">
+        Модели
+    </button>
 
-  <div class="product-card" data-name="Vintera® III Mid '60s Jazzmaster®" data-image="60s-Jazzmaster.jpg">
-    <img src="60s-Jazzmaster.jpg" class="product-card__image">
-    <h3>Vintera® III Mid '60s Jazzmaster®</h3>
-    <p>130 000 ₽</p>
-    <button onclick="addToCart(this)">В корзину</button>
-  </div>
+    <button
+        onmouseenter="renderCategories('bass')">
+        Бас
+    </button>
+
+    <button
+        onmouseenter="renderCategories('squier')">
+        Squier
+    </button>
 
 </div>
+
+<div class="categories" id="categories"></div>
+<h2 class="title">Каталог</h2>
+
+<div class="catalog__controls">
+  <select id="sortSelect" onchange="sortCatalog()">
+    <option value="default">По умолчанию</option>
+    <option value="asc">По возрастанию цены</option>
+    <option value="desc">По убыванию цены</option>
+  </select>
+</div>
+
+<div class="catalog__list" id="catalog"></div>
 
 </main>
 
 <script src="script.js"></script>
+<footer class="footer">
 
+  <div class="footer__content">
+
+    <div class="footer__section">
+      <h3>Fender Shop</h3>
+      <p>Оригинальные гитары Fender</p>
+    </div>
+
+    <div class="footer__section">
+      <h3>Контакты</h3>
+      <p>Email: info@fendershop.ru</p>
+      <a href="https://www.instagram.com/fender/" target="_blank">
+        Instagram
+      </a>
+    </div>
+
+    <div class="footer__section">
+      <h3>Навигация</h3>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    © 2026 Fender Shop<br>Все права защищены
+  </div>
+
+</footer>
 </body>
 </html>

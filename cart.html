@@ -27,12 +27,61 @@
 
 <h2 class="title">Корзина</h2>
 
+<p id="empty-cart" class="empty-cart">
+  Корзина пуста
+</p>
+
 <div id="cart-items"></div>
 
-<button class="cart__clear" onclick="clearCart()">Очистить корзину</button>
+<div class="cart__bottom">
+
+  <div class="cart__center">
+    <div id="cart-total">Итого: 0 ₽</div>
+
+    <button class="cart__checkout">
+      Оформить заказ
+    </button>
+  </div>
+
+  <button class="cart__clear" onclick="clearCart()">
+    Очистить корзину
+  </button>
+
+</div>
 
 </main>
 
 <script src="script.js"></script>
+
+<footer class="footer">
+
+  <div class="footer__content">
+
+    <div class="footer__section">
+      <h3>Fender Shop</h3>
+      <p>Оригинальные гитары Fender</p>
+    </div>
+
+    <div class="footer__section">
+      <h3>Контакты</h3>
+      <p>Email: info@fendershop.ru</p>
+      <a href="https://www.instagram.com/fender/" target="_blank">
+        Instagram
+      </a>
+    </div>
+
+    <div class="footer__section">
+      <h3>Навигация</h3>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    © 2026 Fender Shop<br>Все права защищены
+  </div>
+
+</footer>
 </body>
 </html>
