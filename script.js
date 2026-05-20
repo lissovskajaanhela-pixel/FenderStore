@@ -168,102 +168,127 @@ let products = [
     },
     {   name: "Player Mustang®",
         price: 62500,
+        types: ["Mustang"],
         image: "guitars/Player Mustang®.png"
     },
     {   name: "Limited Edition Squier Sonic® Mustang® HH",
         price: 15900,
+        types: ["Mustang", "Squier Mustang"],
         image: "guitars/Limited Edition Squier Sonic® Mustang® HH.png"
     },
     {   name: "Limited Edition Squier Sonic® Mustang®",
         price: 18900,
+        types: ["Mustang", "Squier Mustang"],
         image: "guitars/Limited Edition Squier Sonic® Mustang®.png"
     },
     {   name: "American Performer Mustang®",
         price: 138000,
+        types: ["Mustang"],
         image: "guitars/American Performer Mustang®.png"
     },
     {   name: "Limited Edition Vintera® II '70s Mustang®, Sherwood Green Metallic",
         price: 103900,
+        types: ["Mustang"],
         image: "guitars/Limited Edition Vintera® II '70s Mustang®, Sherwood Green Metallic.png"
     },
     {   name: "Made in Japan Traditional 2025 Collection '60s Mustang®",
         price: 137000,
+        types: ["Mustang"],
         image: "guitars/Made in Japan Traditional 2025 Collection '60s Mustang®.png"
     },
     {   name: "Ben Gibbard Mustang®",
         price: 115500,
+        types: ["Mustang"],
         image: "guitars/Ben Gibbard Mustang®.png"
     },
     {   name: "Player II Mustang®",
         price: 62000,
+        types: ["Mustang"],
         image: "guitars/Player II Mustang®.png"
     },
     {   name: "Vintera® II '70s Competition Mustang®",
         price: 96000,
+        types: ["Mustang"],
         image: "guitars/Vintera® II '70s Competition Mustang®.png"
     },
     {   name: "American Ultra II Meteora®",
         price: 227700,
+        types: ["Meteora"],
         image: "guitars/American Ultra II Meteora®.png"
     },
     {   name: "Limited Edition Player Plus Meteora",
         price: 110500,
+        types: ["Meteora"],
         image: "guitars/Limited Edition Player Plus Meteora.png"
     },
     {   name: "American Professional Classic Jazz Bass®",
         price: 147000,
+        types: ["Jazz Bass"],
         image: "guitars/American Professional Classic Jazz Bass®.png"
     },
     {   name: "Vintera® III Early '70s Jazz Bass®",
         price: 116400,
+        types: ["Jazz Bass"],
         image: "guitars/Vintera® III Early '70s Jazz Bass®.png"
     },
     {   name: "Vintera® III Early '60s Jazz Bass®",
         price: 108000,
+        types: ["Jazz Bass"],
         image: "guitars/Vintera® III Early '60s Jazz Bass®.png"
     },
     {   name: "Limited Edition Player II Jazz Bass® Plus Top, Blue Burst",
         price: 80000,
+        types: ["Jazz Bass"],
         image: "guitars/Limited Edition Player II Jazz Bass® Plus Top, Blue Burst.png"
     },
     {   name: "Made in Japan Limited Jazz Bass®, Raw Ash",
         price: 141000,
+        types: ["Jazz Bass"],
         image: "guitars/Made in Japan Limited Jazz Bass®, Raw Ash.png"
     },
     {   name: "American Professional II Jazz Bass®",
         price: 198900,
+        types: ["Jazz Bass"],
         image: "guitars/American Professional II Jazz Bass®.png"
     },
     {   name: "American Professional II Jazz Bass® V",
         price: 198900,
+        types: ["Jazz Bass"],
         image: "guitars/American Professional II Jazz Bass® V.png"
     },
     {   name: "American Vintage II 1966 Jazz Bass®",
         price: 227700,
+        types: ["Jazz Bass"],
         image: "guitars/American Vintage II 1966 Jazz Bass®.png"
     },
     {   name: "Player II Jazz Bass®",
         price: 80500,
+        types: ["Jazz Bass"],
         image: "guitars/Player II Jazz Bass®.png"
     },
     {   name: "Standard Jazz Bass®",
         price: 54000,
+        types: ["Jazz Bass"],
         image: "guitars/Standard Jazz Bass®.png"
     },
     {   name: "American Ultra II Jazz Bass®",
         price: 227600,
+        types: ["Jazz Bass"],
         image: "guitars/American Ultra II Jazz Bass®.png"
     },
     {   name: "Limited Edition Player II Jazz Bass®, British Racing Green",
         price: 88800,
+        types: ["Jazz Bass"],
         image: "guitars/Limited Edition Player II Jazz Bass®, British Racing Green.png"
     },
     {   name: "American Ultra II Meteora® Bass",
         price: 227600,
+        types: ["Meteora Bass"],
         image: "guitars/American Ultra II Meteora® Bass.png"
     },
     {   name: "Player Plus Active Meteora® Bass",
         price: 113000,
+        types: ["Meteora Bass"],
         image: "guitars/Player Plus Active Meteora® Bass.png"
     },
     {   name: "Player Jaguar® Bass",
@@ -288,7 +313,6 @@ let products = [
     },
     {   name: "Tom Morello's Arm The Homeless Guitar",
         price: 154000,
-        types: ["Artist Model"],
         image: "guitars/Tom Morello's Arm The Homeless Guitar.png"
     },
     {   name: "Squier Sonic® Stratocaster® HT",
@@ -373,10 +397,12 @@ let products = [
     },
     {   name: "Limited Edition Affinity™ Jaguar®, Daphne Blue",
         price: 29000,
+        types: ["Jaguar", "Squier Jaguar"],
         image: "guitars/Limited Edition Affinity™ Jaguar®, Daphne Blue.png"
     },
     {   name: "Affinity Series® Jaguar®",
         price: 26000,
+        types: ["Jaguar", "Squier Jaguar"],
         image: "guitars/Affinity Series® Jaguar®.png"
     },
     {   name: "Classic Vibe Starcaster®",
@@ -696,6 +722,13 @@ function updateCart() {
 
 function filterCatalog(type) {
 
+    if (!type) {
+ 
+        document.querySelectorAll(".product-card")
+            .forEach(card => card.style.display = "flex");
+        return;
+    }
+
     const cards = document.querySelectorAll(".product-card");
 
     cards.forEach(card => {
@@ -703,7 +736,7 @@ function filterCatalog(type) {
         const name = card.dataset.name;
         const product = products.find(p => p.name === name);
 
-        if (!product) return;
+        if (!product || !product.types) return;
 
         const match = product.types.includes(type);
 
@@ -711,6 +744,15 @@ function filterCatalog(type) {
     });
 }
 
-renderCatalog();
-updateCart();
-filterCatalog();
+document.addEventListener("DOMContentLoaded", () => {
+
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type");
+
+    renderCatalog();
+    updateCart();
+
+    if (type) {
+        filterCatalog(type);
+    }
+});
