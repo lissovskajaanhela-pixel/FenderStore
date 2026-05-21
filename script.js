@@ -437,8 +437,6 @@ let products = [
     }
 ];
 
-let originalProducts = [...products];
-
 const categoriesData = {
 
     models: [
@@ -547,7 +545,7 @@ let activeCategory = null;
 
 function showCategories(category) {
     const container = document.getElementById("categories");
-    if (!container) return;
+    if (!container || !categoriesData[category]) return;
 
     container.style.display = "grid";
 
@@ -604,34 +602,34 @@ function closeCategoryHover() {
     container.innerHTML = "";
 }
 
-function sortCatalog() {
-    const value = document.getElementById("sortSelect").value;
+function updateView() {
+    let list = getVisibleProducts();
+
+    const select = document.getElementById("sortSelect");
+    const value = select?.value;
 
     if (value === "asc") {
-        products.sort((a, b) => a.price - b.price);
-    } 
-    else if (value === "desc") {
-        products.sort((a, b) => b.price - a.price);
-    } 
-    else {
-        products = [...originalProducts];
+        list = list.slice().sort((a, b) => a.price - b.price);
+    } else if (value === "desc") {
+        list = list.slice().sort((a, b) => b.price - a.price);
     }
 
-    renderCatalog();
+    renderCatalog(list);
 }
 
+function sortCatalog() {
+    updateView();
+}
 
-function renderCatalog() {
+function renderCatalog(list = products) {
     const container = document.getElementById("catalog");
     if (!container) return;
 
-    container.innerHTML = products.map(p => `
+    container.innerHTML = list.map(p => `
         <div class="product-card" data-name="${p.name}" data-image="${p.image}">
-
             <img src="${p.image}" class="product-card__image">
 
             <div class="product-card__info">
-
                 <h3>${p.name}</h3>
 
                 <div class="product-card__bottom">
@@ -640,9 +638,7 @@ function renderCatalog() {
                         Купить
                     </button>
                 </div>
-
             </div>
-
         </div>
     `).join("");
 }
@@ -742,38 +738,53 @@ function updateCart() {
     }
 }
 
-function filterCatalog(type) {
+let activeTypeFilter = null;
+let searchQuery = null;
 
-    if (!type) {
- 
-        document.querySelectorAll(".product-card")
-            .forEach(card => card.style.display = "flex");
-        return;
+function getVisibleProducts() {
+    let result = [...products];
+
+    if (activeTypeFilter) {
+        result = result.filter(p =>
+            p.types && p.types.includes(activeTypeFilter)
+        );
     }
 
-    const cards = document.querySelectorAll(".product-card");
+    if (searchQuery) {
+        result = result.filter(p =>
+            p.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+    }
 
-    cards.forEach(card => {
+    return result;
+}
 
-        const name = card.dataset.name;
-        const product = products.find(p => p.name === name);
+function filterCatalog(type) {
+    activeTypeFilter = type || null;
 
-        if (!product || !product.types) return;
+    const url = new URL(window.location.href);
 
-        const match = product.types.includes(type);
+    if (type) {
+        url.searchParams.set("type", type);
+    } else {
+        url.searchParams.delete("type");
+    }
 
-        card.style.display = match ? "flex" : "none";
-    });
+    history.pushState({}, "", url);
+
+    updateView();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
     const params = new URLSearchParams(window.location.search);
 
-    const type = params.get("type");
     const search = params.get("search");
+    const type = params.get("type");
 
-    renderCatalog();
+    searchQuery = search || null;
+    activeTypeFilter = type || null;
+
+    updateView();
     updateCart();
 
     const searchInput = document.getElementById("searchInput");
@@ -781,32 +792,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (search && searchInput) {
         searchInput.value = search;
     }
-    const cards = document.querySelectorAll(".product-card");
-
-    cards.forEach(card => {
-
-        let visible = true;
-
-        const name = card.dataset.name.toLowerCase();
-
-        const product = products.find(
-            p => p.name === card.dataset.name
-        );
-
-        if (search) {
-            visible = name.includes(
-                search.toLowerCase()
-            );
-        }
-
-        if (visible && type && product?.types) {
-            visible = product.types.includes(type);
-        }
-
-        card.style.display =
-            visible ? "flex" : "none";
-    });
-
 });
 
 function searchModel(event) {
@@ -826,15 +811,13 @@ function searchModel(event) {
 
 function clearSearch() {
     const input = document.getElementById("searchInput");
-    if (!input) return;
+    if (input) input.value = "";
 
-    input.value = "";
-
+    searchQuery = null;
 
     const url = new URL(window.location.href);
     url.searchParams.delete("search");
     window.history.replaceState({}, "", url);
- 
-    document.querySelectorAll(".product-card")
-        .forEach(card => card.style.display = "flex");
+
+    updateView();
 }
