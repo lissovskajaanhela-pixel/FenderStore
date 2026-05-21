@@ -15,11 +15,38 @@
 
     <img src="Fenderlogo.png" class="header__logo-image">
 
-    <nav class="header__nav">
-      <a href="index.html">Главная</a>
-      <a href="catalog.html">Каталог</a>
-      <a href="cart.html">Корзина (<span class="cart-count">0</span>)</a>
-    </nav>
+    <div class="header__right">
+
+  <form class="search-form" onsubmit="searchModel(event)">
+    
+    <div class="search-wrapper">
+        <input 
+            id="searchInput"
+            class="search-form__input"
+            type="text"
+            placeholder="Поиск..."
+        >
+
+        <button type="button" class="search-clear" onclick="clearSearch()">
+            ✕
+        </button>
+    </div>
+
+    <button class="search-form__button">
+        Найти
+    </button>
+
+  </form>
+
+  <nav class="header__nav">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="cart.html">
+      Корзина (<span class="cart-count">0</span>)
+    </a>
+  </nav>
+
+</div>
 
   </div>
 </header>
@@ -28,21 +55,24 @@
 
 <h2 class="title">Категории</h2>
 
-<div class="catalog-menu">
+<div class="catalog-menu" onmouseleave="closeCategoryHover()">
 
     <button
-        onmouseenter="renderCategories('models')">
-        Модели
+      onmouseenter="openCategory('models')"
+      onclick="toggleCategory('models', this)">
+      Модели
     </button>
 
     <button
-        onmouseenter="renderCategories('bass')">
-        Бас
+      onmouseenter="openCategory('bass')"
+      onclick="toggleCategory('bass', this)">
+      Бас
     </button>
 
     <button
-        onmouseenter="renderCategories('squier')">
-        Squier
+      onmouseenter="openCategory('squier')"
+      onclick="toggleCategory('squier', this)">
+      Squier
     </button>
 
 </div>

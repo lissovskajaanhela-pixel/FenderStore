@@ -542,45 +542,67 @@ const categoriesData = {
 
 };
 
-function renderCategories(category) {
+let categoriesPinned = false;
+let activeCategory = null;
 
+function showCategories(category) {
     const container = document.getElementById("categories");
-
     if (!container) return;
-
-    const current = categoriesData[category];
 
     container.style.display = "grid";
 
-    container.innerHTML = current.map(item => `
-
-        <a href="catalog.html?type=${item.type}"
-           class="category-card">
-
-            <img src="${item.image}"
-                 class="category-card__image">
-
-            <p class="category-card__title">
-                ${item.title}
-            </p>
-
+    container.innerHTML = categoriesData[category].map(item => `
+        <a href="catalog.html?type=${item.type}" class="category-card">
+            <img src="${item.image}" class="category-card__image">
+            <p class="category-card__title">${item.title}</p>
         </a>
-
     `).join("");
 }
 
-document.addEventListener("mousemove", (e) => {
+window.addEventListener("beforeunload", () => {
+    categoriesPinned = false;
+});
 
-    const menu = document.querySelector(".catalog-menu");
-    const categories = document.getElementById("categories");
+function openCategory(category) {
+    if (categoriesPinned) return;
+    showCategories(category);
+}
 
-    if (!menu.contains(e.target) &&
-        !categories.contains(e.target)) {
+function toggleCategory(category, el) {
+    const container = document.getElementById("categories");
+    if (!container) return;
 
-        categories.style.display = "none";
+    if (categoriesPinned && activeCategory === category) {
+        categoriesPinned = false;
+        activeCategory = null;
+        container.style.display = "none";
+
+        document.querySelectorAll(".catalog-menu button")
+            .forEach(b => b.classList.remove("active"));
+
+        return;
     }
 
-});
+    categoriesPinned = true;
+    activeCategory = category;
+
+    document.querySelectorAll(".catalog-menu button")
+        .forEach(b => b.classList.remove("active"));
+
+    el.classList.add("active");
+
+    showCategories(category);
+}
+
+function closeCategoryHover() {
+    if (categoriesPinned) return;
+
+    const container = document.getElementById("categories");
+    if (!container) return;
+
+    container.style.display = "none";
+    container.innerHTML = "";
+}
 
 function sortCatalog() {
     const value = document.getElementById("sortSelect").value;
@@ -747,12 +769,72 @@ function filterCatalog(type) {
 document.addEventListener("DOMContentLoaded", () => {
 
     const params = new URLSearchParams(window.location.search);
+
     const type = params.get("type");
+    const search = params.get("search");
 
     renderCatalog();
     updateCart();
 
-    if (type) {
-        filterCatalog(type);
+    const searchInput = document.getElementById("searchInput");
+
+    if (search && searchInput) {
+        searchInput.value = search;
     }
+    const cards = document.querySelectorAll(".product-card");
+
+    cards.forEach(card => {
+
+        let visible = true;
+
+        const name = card.dataset.name.toLowerCase();
+
+        const product = products.find(
+            p => p.name === card.dataset.name
+        );
+
+        if (search) {
+            visible = name.includes(
+                search.toLowerCase()
+            );
+        }
+
+        if (visible && type && product?.types) {
+            visible = product.types.includes(type);
+        }
+
+        card.style.display =
+            visible ? "flex" : "none";
+    });
+
 });
+
+function searchModel(event) {
+    event.preventDefault();
+
+    const input = document.getElementById("searchInput");
+
+    if (!input) return;
+
+    const query = input.value.trim();
+
+    if (!query) return;
+
+    window.location.href =
+        `catalog.html?search=${encodeURIComponent(query)}`;
+}
+
+function clearSearch() {
+    const input = document.getElementById("searchInput");
+    if (!input) return;
+
+    input.value = "";
+
+
+    const url = new URL(window.location.href);
+    url.searchParams.delete("search");
+    window.history.replaceState({}, "", url);
+ 
+    document.querySelectorAll(".product-card")
+        .forEach(card => card.style.display = "flex");
+}

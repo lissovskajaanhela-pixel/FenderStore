@@ -14,11 +14,38 @@
 
     <img src="Fenderlogo.png" class="header__logo-image">
 
-    <nav class="header__nav">
-      <a href="index.html">Главная</a>
-      <a href="catalog.html">Каталог</a>
-      <a href="cart.html">Корзина (<span class="cart-count">0</span>)</a>
-    </nav>
+    <div class="header__right">
+
+  <form class="search-form" onsubmit="searchModel(event)">
+    
+    <div class="search-wrapper">
+        <input 
+            id="searchInput"
+            class="search-form__input"
+            type="text"
+            placeholder="Введите название..."
+        >
+
+        <button type="button" class="search-clear" onclick="clearSearch()">
+            ✕
+        </button>
+    </div>
+
+    <button class="search-form__button">
+        Найти
+    </button>
+
+  </form>
+
+  <nav class="header__nav">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="cart.html">
+      Корзина (<span class="cart-count">0</span>)
+    </a>
+  </nav>
+
+</div>
 
   </div>
 </header>
@@ -62,6 +89,43 @@
   </a>
 
 </div>
+
+<section class="story-section">
+
+    <div class="story-section__container">
+
+        <div class="story-section__left">
+            <img src="Story.png" alt="Fender Story">
+        </div>
+        
+        <div class="story-section__right">
+
+            <h2>История Fender</h2>
+
+            <p>
+                В конце 1940-х годов компания Fender начала разработку гитары с цельным корпусом на замену популярным в то время инструментам с полым корпусом. Цельнокорпусные гитары уже существовали довольно продолжительное время, однако они считались чем-то диковинным и довольно необычным.
+                Небольшой спойлер: спустя некоторое время цельнокорпусные гитары станут общепринятой классикой, в то время как полые гитары превратятся в нишевые инструменты.
+                Первое детище Лео – гитара Fender Esquire, которая вышла на свет в 1950 году и стала неким предвестником светлого и славного гитарного будущего. Гриф с болтовым креплением, цельный корпус и один звукосниматель – это всё, что было на гитаре. Собственно, большего и не нужно было, из-за чего Esquire быстро завоевал популярность на рынке.
+
+
+            </p>
+
+            <p>
+                С момента появления Stratocaster и Telecaster бренд стал символом
+                электрогитарной культуры во всём мире.
+            </p>
+
+            <a class="story-btn"
+               href="https://ru.wikipedia.org/wiki/Fender"
+               target="_blank">
+                Узнать больше
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 

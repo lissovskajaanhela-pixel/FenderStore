@@ -14,11 +14,38 @@
 
     <img src="Fenderlogo.png" class="header__logo-image">
 
-    <nav class="header__nav">
-      <a href="index.html">Главная</a>
-      <a href="catalog.html">Каталог</a>
-      <a href="cart.html">Корзина (<span class="cart-count">0</span>)</a>
-    </nav>
+    <div class="header__right">
+
+  <form class="search-form" onsubmit="searchModel(event)">
+    
+    <div class="search-wrapper">
+        <input 
+            id="searchInput"
+            class="search-form__input"
+            type="text"
+            placeholder="Поиск..."
+        >
+
+        <button type="button" class="search-clear" onclick="clearSearch()">
+            ✕
+        </button>
+    </div>
+
+    <button class="search-form__button">
+        Найти
+    </button>
+
+  </form>
+
+  <nav class="header__nav">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="cart.html">
+      Корзина (<span class="cart-count">0</span>)
+    </a>
+  </nav>
+
+</div>
 
   </div>
 </header>
