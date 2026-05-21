@@ -311,10 +311,6 @@ let products = [
         types: ["Jaguar Bass"],
         image: "guitars/Limited Edition Mark Hoppus Jaguar® Bass.png"
     },
-    {   name: "Tom Morello's Arm The Homeless Guitar",
-        price: 154000,
-        image: "guitars/Tom Morello's Arm The Homeless Guitar.png"
-    },
     {   name: "Squier Sonic® Stratocaster® HT",
         price: 16000,
         types: ["Stratocaster", "Squier Stratocaster"],
@@ -604,7 +600,6 @@ function closeCategoryHover() {
 
 function updateView() {
     let list = getVisibleProducts();
-
     const select = document.getElementById("sortSelect");
     const value = select?.value;
 
