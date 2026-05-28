@@ -1,0 +1,426 @@
+[
+    {
+        "name": "Vintera® II '70s Stratocaster®",
+        "price": 97700,
+        "types": ["Stratocaster"],
+        "image": "guitars/Vintera® II '70s Stratocaster®.png"
+    },
+    {
+        "name": "American Ultra II Stratocaster® HSS",
+        "price": 224200,
+        "types": ["Stratocaster"],
+        "image": "guitars/American Ultra II Stratocaster® HSS.png"
+    },
+    {
+        "name": "Limited Edition American Ultra II Stratocaster® HSS, Sinister Red",
+        "price": 245500,
+        "types": ["Stratocaster"],
+        "image": "guitars/Limited Edition American Ultra II Stratocaster® HSS, Sinister Red.png"
+    },
+    {
+        "name": "Fender® x Hello Kitty® Black Stratocaster®",
+        "price": 44800,
+        "types": ["Stratocaster"],
+        "image": "guitars/Fender® x Hello Kitty® Black Stratocaster®.png"
+    },
+    {   "name": "American Professional Classic Stratocaster®",
+        "price": 144900,
+        "types": ["Stratocaster"],
+        "image": "guitars/American Professional Classic Stratocaster®.png"
+    },
+    {   "name": "Vintera® III Late '50s Stratocaster®",
+        "price": 105900,
+        "types": ["Stratocaster"],
+        "image": "guitars/Vintera® III Late '50s Stratocaster®.png"
+    },
+    {   "name": "Made in Japan Limited Stratocaster®, Raw Ash",
+        "price": 143800,
+        "types": ["Stratocaster"],
+        "image": "guitars/Made in Japan Limited Stratocaster®, Raw Ash.png"
+    },
+    {   "name": "Vintera® III Late '60s Stratocaster®",
+        "price": 105900,
+        "types": ["Stratocaster"],
+        "image": "guitars/Vintera® III Late '60s Stratocaster®.png"
+    },
+    {   "name": "Classic Vibe '60s Jazzmaster®",
+        "price": 45500,
+        "types": ["Jazzmaster", "Squier Jazzmaster"],
+        "image": "guitars/Classic Vibe '60s Jazzmaster®.png"
+    },
+    {   "name": "Made in Japan Traditional 2025 Collection, 60s Jazzmaster®",
+        "price": 136600,
+        "types": ["Jazzmaster"],
+        "image": "guitars/Made in Japan Traditional 2025 Collection, 60s Jazzmaster®.png"
+    },
+    {   "name": "Gold Foil Jazzmaster®",
+        "price": 139000,
+        "types": ["Jazzmaster"],
+        "image": "guitars/Gold Foil Jazzmaster®.png"
+    },
+    {   "name": "American Professional II Jazzmaster® Left-Hand",
+        "price": 187000,
+        "types": ["Jazzmaster"],
+        "image": "guitars/American Professional II Jazzmaster® Left-Hand.png"
+    },
+    {   "name": "American Vintage II 1966 Jazzmaster®",
+        "price": 236000,
+        "types": ["Jazzmaster"],
+        "image": "guitars/American Vintage II 1966 Jazzmaster®.png"
+    },
+    {   "name": "Vintera® II '50s Jazzmaster®",
+        "price": 101000,
+        "types": ["Jazzmaster"],
+        "image": "guitars/Vintera® II '50s Jazzmaster®.png"
+    },
+    {   "name": "Limited Edition Player II Jazzmaster®, Shell Pink",
+        "price": 80000,
+        "types": ["Jazzmaster"],
+        "image": "guitars/Limited Edition Player II Jazzmaster®, Shell Pink.png"
+    },
+    {   "name": "American Professional Classic Jazzmaster®",
+        "price": 148200,
+        "types": ["Jazzmaster"],
+        "image": "guitars/American Professional Classic Jazzmaster®.png"
+    },
+    {   "name": "Vintera® III Mid '60s Jazzmaster®",
+        "price": 112000,
+        "types": ["Jazzmaster"],
+        "image": "guitars/Vintera® III Mid '60s Jazzmaster®.png"
+    },
+    {   "name": "Jason Isbell Custom Telecaster®",
+        "price": 156500,
+        "types": ["Telecaster"],
+        "image": "guitars/Jason Isbell Custom Telecaster®.png"
+    },
+    {   "name": "American Professional Classic Hotshot Telecaster®",
+        "price": 145700,
+        "types": ["Telecaster"],
+        "image": "guitars/American Professional Classic Hotshot Telecaster®.png"
+    },
+    {   "name": "75th Anniversary Player II Telecaster®",
+        "price": 91000,
+        "types": ["Telecaster"],
+        "image": "guitars/75th Anniversary Player II Telecaster®.png"
+    },
+    {   "name": "Limited Edition Fender® x PAC-MAN™ Player II Telecaster®",
+        "price": 91000,
+        "types": ["Telecaster"],
+        "image": "guitars/Limited Edition Fender® x PAC-MAN™ Player II Telecaster®.png"
+    },
+    {   "name": "Vintera® III Mid '60s Telecaster®",
+        "price": 108000,
+        "types": ["Telecaster"],
+        "image": "guitars/Vintera® III Mid '60s Telecaster®.png"
+    },
+    {   "name": "75th Anniversary Vintera® Road Worn® 1951 Telecaster®",
+        "price": 158000,
+        "types": ["Telecaster"],
+        "image": "guitars/75th Anniversary Vintera® Road Worn® 1951 Telecaster®.png"
+    },
+    {   "name": "Limited Edition Affinity Series® Jaguar®",
+        "price": 28000,
+        "types": ["Jaguar", "Squier Jaguar"],
+        "image": "guitars/Limited Edition Affinity Series® Jaguar®.png"
+    },
+    {   "name": "Made in Japan Traditional 2025 Collection, 60s Jaguar®",
+        "price": 137000,
+        "types": ["Jaguar"],
+        "image": "guitars/Made in Japan Traditional 2025 Collection, 60s Jaguar®.png"
+    },
+    {   "name": "Limited Edition Affinity™ Jaguar®, Shell Pink",
+        "price": 28000,
+        "types": ["Jaguar", "Squier Jaguar"],
+        "image": "guitars/Limited Edition Affinity™ Jaguar®, Shell Pink.png"
+    },
+    {   "name": "Limited Edition Johnny Marr Signature Special Jaguar®",
+        "price": 280800,
+        "types": ["Jaguar"],
+        "image": "guitars/Limited Edition Johnny Marr Signature Special Jaguar®.png"
+    },
+    {   "name": "Vintera® III Mid '60s Jaguar®",
+        "price": 112900,
+        "types": ["Jaguar"],
+        "image": "guitars/Vintera® III Mid '60s Jaguar®.png"
+    },
+    {   "name": "Affinity Series® Starcaster®",
+        "price": 26200,
+        "types": ["Starcaster", "Squier Starcaster"],
+        "image": "guitars/Affinity Series® Starcaster®.png"
+    },
+    {   "name": "Affinity Series® Starcaster® Deluxe",
+        "price": 31200,
+        "types": ["Starcaster", "Squier Starcaster"],
+        "image": "guitars/Affinity Series® Starcaster® Deluxe.png"
+    },
+    {   "name": "Tom DeLonge Starcaster®",
+        "price": 99800,
+        "types": ["Starcaster"],
+        "image": "guitars/Tom DeLonge Starcaster®.png"
+    },
+    {   "name": "Player Mustang®",
+        "price": 62500,
+        "types": ["Mustang"],
+        "image": "guitars/Player Mustang®.png"
+    },
+    {   "name": "Limited Edition Squier Sonic® Mustang® HH",
+        "price": 15900,
+        "types": ["Mustang", "Squier Mustang"],
+        "image": "guitars/Limited Edition Squier Sonic® Mustang® HH.png"
+    },
+    {   "name": "Limited Edition Squier Sonic® Mustang®",
+        "price": 18900,
+        "types": ["Mustang", "Squier Mustang"],
+        "image": "guitars/Limited Edition Squier Sonic® Mustang®.png"
+    },
+    {   "name": "American Performer Mustang®",
+        "price": 138000,
+        "types": ["Mustang"],
+        "image": "guitars/American Performer Mustang®.png"
+    },
+    {   "name": "Limited Edition Vintera® II '70s Mustang®, Sherwood Green Metallic",
+        "price": 103900,
+        "types": ["Mustang"],
+        "image": "guitars/Limited Edition Vintera® II '70s Mustang®, Sherwood Green Metallic.png"
+    },
+    {   "name": "Made in Japan Traditional 2025 Collection '60s Mustang®",
+        "price": 137000,
+        "types": ["Mustang"],
+        "image": "guitars/Made in Japan Traditional 2025 Collection '60s Mustang®.png"
+    },
+    {   "name": "Ben Gibbard Mustang®",
+        "price": 115500,
+        "types": ["Mustang"],
+        "image": "guitars/Ben Gibbard Mustang®.png"
+    },
+    {   "name": "Player II Mustang®",
+        "price": 62000,
+        "types": ["Mustang"],
+        "image": "guitars/Player II Mustang®.png"
+    },
+    {   "name": "Vintera® II '70s Competition Mustang®",
+        "price": 96000,
+        "types": ["Mustang"],
+        "image": "guitars/Vintera® II '70s Competition Mustang®.png"
+    },
+    {   "name": "American Ultra II Meteora®",
+        "price": 227700,
+        "types": ["Meteora"],
+        "image": "guitars/American Ultra II Meteora®.png"
+    },
+    {   "name": "Limited Edition Player Plus Meteora",
+        "price": 110500,
+        "types": ["Meteora"],
+        "image": "guitars/Limited Edition Player Plus Meteora.png"
+    },
+    {   "name": "American Professional Classic Jazz Bass®",
+        "price": 147000,
+        "types": ["Jazz Bass"],
+        "image": "guitars/American Professional Classic Jazz Bass®.png"
+    },
+    {   "name": "Vintera® III Early '70s Jazz Bass®",
+        "price": 116400,
+        "types": ["Jazz Bass"],
+        "image": "guitars/Vintera® III Early '70s Jazz Bass®.png"
+    },
+    {   "name": "Vintera® III Early '60s Jazz Bass®",
+        "price": 108000,
+        "types": ["Jazz Bass"],
+        "image": "guitars/Vintera® III Early '60s Jazz Bass®.png"
+    },
+    {   "name": "Limited Edition Player II Jazz Bass® Plus Top, Blue Burst",
+        "price": 80000,
+        "types": ["Jazz Bass"],
+        "image": "guitars/Limited Edition Player II Jazz Bass® Plus Top, Blue Burst.png"
+    },
+    {   "name": "Made in Japan Limited Jazz Bass®, Raw Ash",
+        "price": 141000,
+        "types": ["Jazz Bass"],
+        "image": "guitars/Made in Japan Limited Jazz Bass®, Raw Ash.png"
+    },
+    {   "name": "American Professional II Jazz Bass®",
+        "price": 198900,
+        "types": ["Jazz Bass"],
+        "image": "guitars/American Professional II Jazz Bass®.png"
+    },
+    {   "name": "American Professional II Jazz Bass® V",
+        "price": 198900,
+        "types": ["Jazz Bass"],
+        "image": "guitars/American Professional II Jazz Bass® V.png"
+    },
+    {   "name": "American Vintage II 1966 Jazz Bass®",
+        "price": 227700,
+        "types": ["Jazz Bass"],
+        "image": "guitars/American Vintage II 1966 Jazz Bass®.png"
+    },
+    {   "name": "Player II Jazz Bass®",
+        "price": 80500,
+        "types": ["Jazz Bass"],
+        "image": "guitars/Player II Jazz Bass®.png"
+    },
+    {   "name": "Standard Jazz Bass®",
+        "price": 54000,
+        "types": ["Jazz Bass"],
+        "image": "guitars/Standard Jazz Bass®.png"
+    },
+    {   "name": "American Ultra II Jazz Bass®",
+        "price": 227600,
+        "types": ["Jazz Bass"],
+        "image": "guitars/American Ultra II Jazz Bass®.png"
+    },
+    {   "name": "Limited Edition Player II Jazz Bass®, British Racing Green",
+        "price": 88800,
+        "types": ["Jazz Bass"],
+        "image": "guitars/Limited Edition Player II Jazz Bass®, British Racing Green.png"
+    },
+    {   "name": "American Ultra II Meteora® Bass",
+        "price": 227600,
+        "types": ["Meteora Bass"],
+        "image": "guitars/American Ultra II Meteora® Bass.png"
+    },
+    {   "name": "Player Plus Active Meteora® Bass",
+        "price": 113000,
+        "types": ["Meteora Bass"],
+        "image": "guitars/Player Plus Active Meteora® Bass.png"
+    },
+    {   "name": "Player Jaguar® Bass",
+        "price": 82000,
+        "types": ["Jaguar Bass"],
+        "image": "guitars/Player Jaguar® Bass.png"
+    },
+    {   "name": "Limited Edition Mike Kerr Jaguar® Bass",
+        "price": 158000,
+        "types": ["Jaguar Bass"],
+        "image": "guitars/Limited Edition Mike Kerr Jaguar® Bass.png"
+    },
+    {   "name": "Affinity Series® Jaguar® Bass H",
+        "price": 24000,
+        "types": ["Jaguar Bass", "Squier Jaguar Bass"],
+        "image": "guitars/Affinity Series® Jaguar® Bass H.png"
+    },
+    {   "name": "Limited Edition Mark Hoppus Jaguar® Bass",
+        "price": 130000,
+        "types": ["Jaguar Bass"],
+        "image": "guitars/Limited Edition Mark Hoppus Jaguar® Bass.png"
+    },
+    {   "name": "Squier Sonic® Stratocaster® HT",
+        "price": 16000,
+        "types": ["Stratocaster", "Squier Stratocaster"],
+        "image": "guitars/Squier Sonic® Stratocaster® HT.png"
+    },
+    {   "name": "Squier Sonic® Stratocaster® HSS",
+        "price": 18000,
+        "types": ["Stratocaster", "Squier Stratocaster"],
+        "image": "guitars/Squier Sonic® Stratocaster® HSS.png"
+    },
+    {   "name": "Squier Sonic® Stratocaster® HT H",
+        "price": 15300,
+        "types": ["Stratocaster", "Squier Stratocaster"],
+        "image": "guitars/Squier Sonic® Stratocaster® HT H.png"
+    },
+    {   "name": "Squier Sonic® Stratocaster®",
+        "price": 16600,
+        "types": ["Stratocaster", "Squier Stratocaster"],
+        "image": "guitars/Squier Sonic® Stratocaster®.png"
+    },
+    {   "name": "Squier Sonic® Stratocaster® Left-Handed",
+        "price": 16600,
+        "types": ["Stratocaster", "Squier Stratocaster"],
+        "image": "guitars/Squier Sonic® Stratocaster® Left-Handed.png"
+    },
+    {   "name": "Affinity Series® Stratocaster® Junior HSS",
+        "price": 22800,
+        "types": ["Stratocaster", "Squier Stratocaster"],
+        "image": "guitars/Affinity Series® Stratocaster® Junior HSS.png"
+    },
+    {   "name": "Affinity Series® Stratocaster® FMT HSS",
+        "price": 25800,
+        "types": ["Stratocaster", "Squier Stratocaster"],
+        "image": "guitars/Affinity Series® Stratocaster® FMT HSS.png"
+    },
+    {   "name": "Affinity Series® Stratocaster®",
+        "price": 24000,
+        "types": ["Stratocaster", "Squier Stratocaster"],
+        "image": "guitars/Affinity Series® Stratocaster®.png"
+    },
+    {   "name": "Squier Sonic® Telecaster®",
+        "price": 17000,
+        "types": ["Telecaster", "Squier Telecaster"],
+        "image": "guitars/Squier Sonic® Telecaster®.png"
+    },
+    {   "name": "Squier Sonic® Esquire® H",
+        "price": 15500,
+        "types": ["Telecaster", "Squier Telecaster"],
+        "image": "guitars/Squier Sonic® Esquire® H.png"
+    },
+    {   "name": "Affinity Series® Telecaster® Thinline",
+        "price": 25800,
+        "types": ["Telecaster", "Squier Telecaster"],
+        "image": "guitars/Affinity Series® Telecaster® Thinline.png"
+    },
+    {   "name": "Affinity Series® Telecaster® FMT SH",
+        "price": 25800,
+        "types": ["Telecaster", "Squier Telecaster"],
+        "image": "guitars/Affinity Series® Telecaster® FMT SH.png"
+    },
+    {   "name": "Affinity Series® Telecaster® Left-Handed",
+        "price": 24000,
+        "types": ["Telecaster", "Squier Telecaster"],
+        "image": "guitars/Affinity Series® Telecaster® Left-Handed.png"
+    },
+    {   "name": "Affinity Series® Telecaster® Deluxe",
+        "price": 29000,
+        "types": ["Telecaster", "Squier Telecaster"],
+        "image": "guitars/Affinity Series® Telecaster® Deluxe.png"
+    },
+    {   "name": "Affinity Series® Telecaster®",
+        "price": 24000,
+        "types": ["Telecaster", "Squier Telecaster"],
+        "image": "guitars/Affinity Series® Telecaster®.png"
+    },
+    {   "name": "Limited Edition Affinity Series® Jazzmaster®, Metallic Black",
+        "price": 27000,
+        "types": ["Jazzmaster", "Squier Jazzmaster"],
+        "image": "guitars/Limited Edition Affinity Series® Jazzmaster®, Metallic Black.png"
+    },
+    {   "name": "Limited Edition Affinity™ Jaguar®, Daphne Blue",
+        "price": 29000,
+        "types": ["Jaguar", "Squier Jaguar"],
+        "image": "guitars/Limited Edition Affinity™ Jaguar®, Daphne Blue.png"
+    },
+    {   "name": "Affinity Series® Jaguar®",
+        "price": 26000,
+        "types": ["Jaguar", "Squier Jaguar"],
+        "image": "guitars/Affinity Series® Jaguar®.png"
+    },
+    {   "name": "Classic Vibe Starcaster®",
+        "price": 44000,
+        "types": ["Starcaster", "Squier Starcaster"],
+        "image": "guitars/Classic Vibe Starcaster®.png"
+    },
+    {   "name": "Affinity Series® Jazz Bass®",
+        "price": 26000,
+        "types": ["Jazz Bass", "Squier Jazz Bass"],
+        "image": "guitars/Affinity Series® Jazz Bass®.png"
+    },
+    {   "name": "Affinity Series® Jazz Bass® V",
+        "price": 29000,
+        "types": ["Jazz Bass", "Squier Jazz Bass"],
+        "image": "guitars/Affinity Series® Jazz Bass® V.png"
+    },
+    {   "name": "Affinity Series® Active Jazz Bass® V",
+        "price": 28000,
+        "types": ["Jazz Bass", "Squier Jazz Bass"],
+        "image": "guitars/Affinity Series® Active Jazz Bass® V.png"
+    },
+    {   "name": "Affinity Series® Jazz Bass® VI",
+        "price": 29000,
+        "types": ["Jazz Bass", "Squier Jazz Bass"],
+        "image": "guitars/Affinity Series® Jazz Bass® VI.png"
+    },
+    {   "name": "Affinity Series® Active Jazz Bass®",
+        "price": 27000,
+        "types": ["Jazz Bass", "Squier Jazz Bass"],
+        "image": "guitars/Affinity Series® Active Jazz Bass®.png"
+    }
+]
