@@ -188,6 +188,7 @@ main {
   flex-direction: column;
   cursor: pointer;
   transition: transform 0.3s;
+  box-sizing: border-box;
 }
 .product-card:hover {
   transform: scale(1.04);
@@ -313,6 +314,21 @@ main {
 .cart__clear {
   padding: 10px 20px;
   font-size: 13px;
+}
+
+#cart-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 12px;
+  align-items: stretch;
+}
+
+#cart-items .product-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {

@@ -272,7 +272,7 @@ function updateCart() {
         total += item.price || 0;
 
         const div = document.createElement("div");
-        div.className = "product-card";
+        div.className = "product-card cart-item";
 
         div.innerHTML = `
             <div class="product-card__image-wrap">
